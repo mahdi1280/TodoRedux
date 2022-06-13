@@ -1,12 +1,12 @@
 import { ReactComponent as TimesSolid } from './times-solid.svg'
 import {useDispatch, useSelector} from "react-redux";
-import {changeToggled,deletedTodos} from './todosSlice';
+import {changeToggled,deletedTodos,selectedTodo} from './todosSlice';
 
 export const availableColors = ['green', 'blue', 'orange', 'purple', 'red']
 export const capitalize = (s) => s[0].toUpperCase() + s.slice(1)
 
-const TodoListItem = ({ todo }) => {
-
+const TodoListItem = ({ todoId }) => {
+    const todo  = useSelector(state=>state.todos.entities[todoId])
     const { text, completed, color , id } = todo
     const dispatch = useDispatch();
 

@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./fetures/header/Header";
 import './index.css';
 import TodoList from "./fetures/todos/TodoList";
+import Footer from './fetures/footer/Footer';
 
 export default function App(){
     return <div className="App">
@@ -16,7 +17,7 @@ export default function App(){
                 <div className="todoapp">
                     <Header />
                     <TodoList />
-                    {/*<Footer />*/}
+                    <Footer />
                 </div>
             </section>
         </main>
